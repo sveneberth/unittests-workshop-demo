@@ -20,7 +20,7 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
 
-class TestOrderProcess(unittest.TestCase):
+class TestGoogle(unittest.TestCase):
 
     def setUp(self):
         driver_path = os.getenv("DRIVER_PATH", os.path.join(os.getenv("HOME", ""), "chromedriver"))

@@ -4,7 +4,7 @@
 import unittest
 
 
-class TestUtils(unittest.TestCase):
+class TestDemo(unittest.TestCase):
 
     def test_str(self):
         from code.demo import duplicate_value
@@ -22,3 +22,23 @@ class TestUtils(unittest.TestCase):
 
         self.assertEqual([1, 1], duplicate_value([1]))
         self.assertIsNotNone(duplicate_value(["anything"]))
+
+
+class TestDemo2(unittest.TestCase):
+
+    def test_str(self):
+        from code.demo import duplicate_str_value
+
+        self.assertEqual("abab", duplicate_str_value("ab"))
+
+    def test_list(self):
+        from code.demo import duplicate_str_value
+
+        with self.assertRaises(TypeError):
+            duplicate_str_value([1, 2])
+
+    def test_bytes(self):
+        from code.demo import duplicate_str_value
+
+        with self.assertRaises(TypeError):
+            duplicate_str_value(b"ab")
